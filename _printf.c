@@ -9,6 +9,8 @@ int _printf(const char* format, ...){
 		{"s", print_string}, 
 		{"%", print_percent},
 		}
+
+	int i, j, counter;
 	 
 	va_start(arguments, format);
 
