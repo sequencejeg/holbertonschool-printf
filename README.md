@@ -29,7 +29,8 @@ Usage
 Here is a simple example that shows how to use the _printf function:
 #include "main.h"
 
-int main(void) {
+int main(void)
+{
     _printf("Character: %c\n", 'H');
     _printf("String: %s\n", "Holberton");
     _printf("Percent: %%\n");
