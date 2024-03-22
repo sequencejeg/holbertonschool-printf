@@ -6,12 +6,15 @@ int _printf(const char* format, ...)
 	va_list arguments;
 
 	so_t conversion[] = { 
-		{"c", print_character}, 
-		{"s", print_string}, 
-		{"%", print_percent},
-		}
+		{"c", print_characters}, 
+		{"s", print_strings}, 
+		{"%", print_percent}, 
+		{"d", print_integers}, 
+		{"i", print_integers}, 
+		{NULL, NULL}, 
+		};
 
-	int i, j, counter;
+	int i = 0, j, counter = 0;
 	 
 	va_start(arguments, format);
 
@@ -44,13 +47,13 @@ int _printf(const char* format, ...)
 
 			if (conversion[j].function == NULL)
 			{
-				_putchar(format[i] - 1);
+				_putchar(format[i - 1]);
 
-				counter ++;
+				counter++;
 
 				_putchar(format[i]);
 
-				counter ++;
+				counter++;
 			}
 			
 		}
@@ -59,7 +62,7 @@ int _printf(const char* format, ...)
 		{
 			_putchar(format[i]);
 
-			counter ++;
+			counter++;
 		}
 
 		i++;
