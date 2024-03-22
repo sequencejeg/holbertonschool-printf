@@ -22,7 +22,7 @@ It handles a limited set of conversion specifiers (%c, %s, %).
 Contributing
 Feel free to fork this repository and submit pull requests to contribute to its development. For major changes, please open an issue first to discuss what you would like to change.
 
-Authors
+Author
 Jeremy Etienne
 
 Acknowledgments
