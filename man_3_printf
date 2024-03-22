@@ -1,0 +1,24 @@
+.TH _PRINTF 3 "03/21/24" "1.0" "_printf man page"
+.SH NAME
+_printf \- custom implementation of the printf function.
+.SH SYNOPSIS
+#include "main.h"
+
+int _printf(const char *format, ...);
+.SH DESCRIPTION
+The \fB_printf\fR function produces output according to a format as described below. This function writes its output to stdout, the standard output stream.
+
+\fB_printf\fR will return the number of characters printed (excluding the null byte used to end output to strings).
+
+The \fBformat\fR string is composed of zero or more directives. This function can handle the following conversion specifiers:
+\fBc\fR for characters,
+\fBs\fR for strings,
+\fB%\fR for a percent sign,
+\fBd\fR for decimals,
+\fBi\fR for integers.
+.SH "RETURN VALUE"
+On success, the \fB_printf\fR function returns the number of characters printed (excluding the terminating null byte used to end output to strings). On error, a negative value is returned.
+.SH "SEE ALSO"
+\fBprintf(3)\fR
+.SH AUTHOR
+This man page was written by Ramon Vega
