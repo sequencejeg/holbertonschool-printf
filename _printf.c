@@ -1,5 +1,15 @@
 #include "main.h"
 
+/**
+ * _printf - a function that produces output according to a format.
+ * @format: format string containing the characters and the specifiers.
+ *           This string is not modified.
+ * Description: This function mimics the standard printf function from the
+ * standard library. It supports the specifiers c, s, %, d, i.
+ * Return: The number of characters printed (excluding the null byte used to
+ * end output to strings).
+ */
+
 int _printf(const char* format, ...)
 {
 
