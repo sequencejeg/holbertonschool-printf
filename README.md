@@ -1,39 +1,32 @@
-# _printf Project
+Custom _printf Function
 
-This project is a simple re-implementation of the C standard library function `printf`. Our version, `_printf`, mimics the basic functionality of the original `printf` function, handling a subset of its format specifiers. This project is part of the Holberton School curriculum, designed to deepen understanding of variadic functions, string manipulation, and fundamental C programming concepts.
+This repository includes a customized implementation of the C standard library function printf. This project is part of the Holberton School curriculum, and it aims to improve students' grasp of variadic functions, string formatting, and basic C input and output. Our _printf emulates a portion of the conventional printf functionality, including support for character (%c), string (%s), and percent (%%) specifiers.
 
-## Features
-
-- `_printf` supports the following format specifiers:
-- `%c`: Character
-- `%s`: String
-- `%d`: Decimal/Integer
-- `%i`: Integer
-- `%%`: Percent sign
-
-## Installation
-
-To use the `_printf` function in your projects, follow these steps:
-
-Clone the repository to your local machine:
-```bash
-git clone https://github.com/sequencejeg/holbertonschool-printf.git
-
-Include the main header file in your C files:
-#include "main.h"
-
-Compile your code along with the _printf files. For example:
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o output
-
+Features
+Character Printing: The function can print a single character using %c.
+String Printing: It supports string printing with %s.
+Percent Sign Printing: The function can print a literal percent sign %%.
+Modular Design: Easy to extend with additional specifiers by modifying the conversion[] array.
+Installation:
+Clone this repository
+Compile your program with main.h
 Usage
-Here is a simple example that shows how to use the _printf function:
-#include "main.h"
+To use the _printf function in your code, include the header file main.h and call _printf just like you would with the standard 'printf'.
+How It Works
+The _printf function reads through the format string provided. When it encounters a % followed by a known specifier (c, s, or %), it processes the corresponding argument from the variadic list and prints it accordingly. Unrecognized specifiers are printed as-is.
 
-int main(void) {
-    _printf("Character: %c\n", 'H');
-    _printf("String: %s\n", "Holberton");
-    _printf("Percent: %%\n");
-    _printf("Integer: %d\n", 1024);
-    _printf("Integer: %i\n", -1024);
-    return (0);
-}
+Limitations
+The function does not support flag characters, field width, precision, or length modifiers.
+It handles a limited set of conversion specifiers (%c, %s, %).
+
+Contributing
+Feel free to fork this repository and submit pull requests to contribute to its development. For major changes, please open an issue first to discuss what you would like to change.
+
+Authors
+Jeremy Etienne
+
+Acknowledgments
+Holberton School
+
+License
+This project is open source and available
