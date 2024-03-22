@@ -38,3 +38,6 @@ int main(void)
     _printf("Integer: %i\n", -1024);
     return (0);
 }
+
+Authors
+Jeremy Etienne and Ramon Vega
